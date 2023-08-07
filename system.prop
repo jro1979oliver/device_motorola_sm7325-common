@@ -1,10 +1,12 @@
 # Audio
+af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.disable=false
 audio.offload.gapless.enabled=false
 audio.offload.min.duration.secs=60
 audio.offload.video=false
 media.aac_51_output_enabled=true
+ro.af.client_heap_size_kbyte=7168
 
 # Charger
 ro.charger.enable_suspend=1
@@ -38,6 +40,9 @@ ro.qcom.ims.use_moto_vt_ext=true
 
 # Media
 ro.media.recorder-max-base-layer-fps=60
+
+# MTE
+arm64.memtag.process.system_server=off
 
 # Netmgrd
 persist.vendor.data.mode=concurrent
