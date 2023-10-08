@@ -388,14 +388,6 @@ vendor/gpu/kbc/unified_ksqs.bin
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# IO prefetcher
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
 # IRQ balancer
 vendor/bin/msm_irqbalance
 
@@ -569,12 +561,6 @@ vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
-
-# QTI service tracker
--vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 
 # Radio - from pstar - IMS (APK) - from patched source
 -system_ext/priv-app/ims/ims.apk|c219304da58d4d90815d49b3c710c7b9dc93a4fa
