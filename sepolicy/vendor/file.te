@@ -39,3 +39,6 @@ type vendor_sysfs_v4l2_name, fs_type, sysfs_type;
 
 # Vibrator
 type vendor_sysfs_vibrator, fs_type, sysfs_type;
+
+# Usb
+type sysfs_usb_supply, file_type;
