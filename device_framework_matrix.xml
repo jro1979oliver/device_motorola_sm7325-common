@@ -35,6 +35,14 @@
             <instance>gnss_vendor</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+    <name>android.hardware.light</name>
+    <version>2</version>
+    <interface>
+        <name>ILights</name>
+        <instance>default</instance>
+    </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
         <version>1.0-2</version>
@@ -82,13 +90,43 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.vibrator</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
+    <hal format="aidl" optional="true">
+    <name>android.hardware.vibrator</name>
+    <version>2</version>
+    <interface>
+        <name>IVibrator</name>
+        <instance>default</instance>
+    </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
+        <version>1</version>
         <interface>
-            <name>IVibrator</name>
+            <name>IHostapd</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.supplicant</name>
+        <version>1</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	<hal format="hidl" optional="true">
+        <name>android.hardware.wifi</name>
+        <version>1.5-6</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl"> 
+        <name>vendor.qti.hardware.wifi.supplicant</name> 
+        <interface>
+            <name>ISupplicantVendor</name> 
+            <instance>default</instance> 
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -948,6 +986,14 @@
         <version>1.0</version>
         <interface>
             <name>IQtiVoicePrintService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.aospa.power</name>
+        <version>1</version>
+        <interface>
+            <name>IPowerFeature</name>
             <instance>default</instance>
         </interface>
     </hal>
