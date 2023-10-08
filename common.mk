@@ -50,6 +50,18 @@ ifeq ($(TARGET_IS_VAB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 endif
 
+# A/B related packages
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_client \
+    update_engine_sideload \
+    update_verifier \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service \
+    checkpoint_gc \
+    otapreopt_script
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -62,23 +74,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     $(LOCAL_PATH)/configs/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
-
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service \
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
 
 # Ant
 PRODUCT_PACKAGES += \
@@ -195,27 +194,8 @@ TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy \
-    gnss@2.0-xtwifi-client.policy \
-    gnss@2.0-xtwifi-inet-agent.policy \
-    libbatching \
-    libgeofencing \
     libgnss \
-    libgnsspps \
-    libsynergy_loc_api
-
-PRODUCT_PACKAGES += \
-    apdr.conf \
-    flp.conf \
-    gnss_antenna_info.conf \
-    gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf \
-    xtwifi.conf
+    libgnsspps
 
 # Health
 PRODUCT_PACKAGES += \
@@ -411,10 +391,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -539,22 +515,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 
 # WiFi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    hostapd \
-    libqsap_sdk \
-    libwpa_client \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
-    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
-    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
-    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.0.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.2.vendor \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
