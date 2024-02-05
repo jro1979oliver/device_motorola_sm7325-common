@@ -619,14 +619,30 @@ vendor/lib64/libadropbox.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
-# Power-off alarm - from phone 1 - TKQ1.220915.002
-product/app/PowerOffAlarm/PowerOffAlarm.apk|5ae835ca1d1720cfb2aa1c66f0c2c523efabf6d9
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|b9afec1739e5c14a69013c708a0a094d705ee899
+# Power-off alarm - from phone 1 - UP1A.231005.007 2401191910 release-keys
+system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|c31a2bdbed4398c95812ac2d3d0162d632055e00
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|2cff0d9993e6f51e7095f43eb71014eea7cd4ea2
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|7894b5b94626fe4f6beb0761dab8221295382258
 vendor/bin/power_off_alarm|4daf3facda380ea8ef31ad3b56f1d216eec4183a
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0b5b86c7ea668197244b83dad4d686897b5e4fb4
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8956937951c6f99727ace3380f46275e62c932c0
+
+# QCC - from  phone 1  - UP1A.231005.007 2401191910 release-keys
+system_ext/bin/qccsyshal@1.2-service|1d3fa5feff11e463204d31927cfb659f707989e1
+system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc|7279d09cf4d6f594dbab5c288ec16101bd668a95
+system_ext/lib/libqcc_file_agent_sys.so|4d2585631445c27d29f5938d8207d55471a8d8a9
+system_ext/lib/vendor.qti.hardware.qccsyshal@1.0.so|80f9b43d8d76760aae4bcdf7fa1863a3ba545da1
+system_ext/lib/vendor.qti.hardware.qccsyshal@1.1.so|1b519e8f4de03ac3663ea93843da300e51cde4f2
+system_ext/lib/vendor.qti.hardware.qccsyshal@1.2-halimpl.so|6efa57ba208c376076cdccfed1368e9b48fa6ea4
+system_ext/lib/vendor.qti.hardware.qccsyshal@1.2.so|f947a9db665623b022e098f1a599f7ac90c0373d
+system_ext/lib64/libqcc_file_agent_sys.so|594caf0a2fba843dd34c87a7e4775cc1c25bc93a
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so|196bce8c481180705cc04074af4fd8362f15f6d9
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so|cb060471bccda79a173bd26f58aea0e7162d65eb
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so|9663f4512a1e33956a9a348ac19b139ddfe02ee6
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so|db1ea124c0f42fcc1a814d69308d4f9522012e1b
+vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so|b17308cc8c45ae059931b56c7dc7420e375b67b1
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|dc270d1ec097a877374f23e5ba85cdfac19d9797
 
 # QMI
 vendor/bin/irsc_util
@@ -847,7 +863,7 @@ system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml|fce4e18c6568c2
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml|fc930929bee7d1f8ecc5b1c76193acdc2f923fe7
 system_ext/framework/qcrilhook.jar|d3b084c8b9f808adb67933c257f762a3ac708e56
 vendor/bin/ATFWD-daemon|467cbc265faa71a2e2ba9970aca14a259464de14
-vendor/bin/adpl|4edd538946e2b845dd18044a963b8eb6f5be5fba
+vendor/bin/adpl|5ca1d282eecfc90dfc55755ba23b652ce4cd0b86
 vendor/bin/ks|2bcc675556cd146a8a785145f9d2caa1b659b185
 vendor/bin/mbm_spy|f10c0918ca27878d612b6a7f9eb44a8296773ef9
 vendor/bin/pd-mapper|1a914e5e3e838d76049efce67a2352c48c1f0f19
