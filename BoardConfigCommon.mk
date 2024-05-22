@@ -126,9 +126,12 @@ LOC_HIDL_VERSION := 4.0
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
+    $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix_dolby.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += \
+    $(COMMON_PATH)/manifest.xml \
+    $(COMMON_PATH)/configs/vintf/manifest_dolby.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -176,7 +179,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy/vendor \
+    $(COMMON_PATH)/sepolicy/dolby
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
